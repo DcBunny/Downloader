@@ -7,9 +7,9 @@ import java.net.URLConnection;
 
 public class Downloader {
     /**
-     * ÏÂÔØµ¥¸öÎÄ¼þ±£´æµ½±¾µØ
-     * @param source Ô­Í¼Æ¬µÄÍøÖ·
-     * @param targetDir Ä¿±êÄ¿Â¼£¬ÒªÈ·±£ÒÑ´æÔÚ
+     * ä¸‹è½½å•ä¸ªæ–‡ä»¶ä¿å­˜åˆ°æœ¬åœ°
+     * @param source åŽŸå›¾ç‰‡çš„ç½‘å€
+     * @param targetDir ç›®æ ‡ç›®å½•ï¼Œè¦ç¡®ä¿å·²å­˜åœ¨
      */
     public void download(String source, String targetDir) {
         InputStream is = null;
@@ -30,7 +30,7 @@ public class Downloader {
             while ((len = is.read(bs)) != -1) {
                 os.write(bs, 0, len);
             }
-            System.out.println("[INFO]Í¼Æ¬ÏÂÔØÍê±Ï£º" + source + "\n\t ->" + targetFile.getPath() + "(" + Math.floor(targetFile.length() / 1024) + "kb)");
+            System.out.println("[INFO]å›¾ç‰‡ä¸‹è½½å®Œæ¯•ï¼š" + source + "\n\t ->" + targetFile.getPath() + "(" + Math.floor(targetFile.length() / 1024) + "kb)");
         } catch (IOException e) {
            e.printStackTrace();
         } finally {
